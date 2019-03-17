@@ -4,15 +4,13 @@
 #
 Name     : R-prettyunits
 Version  : 1.0.2
-Release  : 13
+Release  : 14
 URL      : https://cran.r-project.org/src/contrib/prettyunits_1.0.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/prettyunits_1.0.2.tar.gz
 Summary  : Pretty, Human Readable Formatting of Quantities
 Group    : Development/Tools
 License  : MIT
-Requires: R-assertthat
-BuildRequires : R-assertthat
-BuildRequires : clr-R-helpers
+BuildRequires : buildreq-R
 
 %description
 [![Linux Build Status](https://travis-ci.org/gaborcsardi/prettyunits.svg?branch=master)](https://travis-ci.org/gaborcsardi/prettyunits)
@@ -27,11 +25,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1521269106
+export SOURCE_DATE_EPOCH=1552781865
 
 %install
+export SOURCE_DATE_EPOCH=1552781865
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1521269106
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -66,8 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library prettyunits|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  prettyunits || :
 
 
 %files
@@ -95,3 +92,7 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/prettyunits/help/prettyunits.rdx
 /usr/lib64/R/library/prettyunits/html/00Index.html
 /usr/lib64/R/library/prettyunits/html/R.css
+/usr/lib64/R/library/prettyunits/tests/testthat.R
+/usr/lib64/R/library/prettyunits/tests/testthat/test-bytes.r
+/usr/lib64/R/library/prettyunits/tests/testthat/test-ms.r
+/usr/lib64/R/library/prettyunits/tests/testthat/test-vague-dt.r
