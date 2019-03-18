@@ -1,6 +1,9 @@
 # This file contains recursive sources that require this package
 R-blob
+R-brms
+R-phylobase
 R-pkgbuild
 R-progress
 R-rcmdcheck
 R-rstan
+R-shinystan
