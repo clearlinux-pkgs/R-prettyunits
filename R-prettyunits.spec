@@ -4,7 +4,7 @@
 #
 Name     : R-prettyunits
 Version  : 1.0.2
-Release  : 21
+Release  : 22
 URL      : https://cran.r-project.org/src/contrib/prettyunits_1.0.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/prettyunits_1.0.2.tar.gz
 Summary  : Pretty, Human Readable Formatting of Quantities
@@ -15,6 +15,7 @@ Requires: R-magrittr
 BuildRequires : R-assertthat
 BuildRequires : R-magrittr
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 [![Linux Build Status](https://travis-ci.org/gaborcsardi/prettyunits.svg?branch=master)](https://travis-ci.org/gaborcsardi/prettyunits)
@@ -29,10 +30,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1569292322
+export SOURCE_DATE_EPOCH=1571877833
 
 %install
-export SOURCE_DATE_EPOCH=1569292322
+export SOURCE_DATE_EPOCH=1571877833
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
