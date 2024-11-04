@@ -5,7 +5,7 @@
 #
 Name     : R-prettyunits
 Version  : 1.2.0
-Release  : 52
+Release  : 53
 URL      : https://cran.r-project.org/src/contrib/prettyunits_1.2.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/prettyunits_1.2.0.tar.gz
 Summary  : Pretty, Human Readable Formatting of Quantities
